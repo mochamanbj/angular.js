@@ -122,6 +122,10 @@ Even though the syntax of this test looks very much like our controller unit tes
 Jasmine, the end-to-end test uses APIs of [Protractor](https://github.com/angular/protractor). Read
 about the Protractor APIs at http://angular.github.io/protractor/#/api.
 
+##NOTE:  Protractor has moved to a newer release so you must update 2 files to get protractor to work -- package.json and protractor_conf.js.
+In package.json -- change "protractor": "^2.1.0" to     "protractor": "*".
+In protractor_conf.js -- change   chromeOnly: true to directConnect:  true
+
 Much like Karma is the test runner for unit tests, we use Protractor to run end-to-end tests.
 Try it with `npm run protractor`. End-to-end tests are slow, so unlike with unit tests, Protractor
 will exit after the test run and will not automatically rerun the test suite on every file change.
